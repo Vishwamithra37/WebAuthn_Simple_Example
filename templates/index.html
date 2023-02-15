@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Jinja import jquery. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='cbor.js') }}"></script>
+    <!-- Jinja import static/gomu.js. -->
+    <!-- <script src="{{ url_for('static', filename='min_webauthn.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='gomu.js') }}"></script>
+    <script src="{{ url_for('static', filename='verri1.js') }}"></script>
+    
+    <script>
+        var rp="{{ rp_id }}";
+        var challenge2="{{ challenge }}";
+        var complex_challenge={{ complete_options | safe }};
+        var verification_options={{ verification_options | safe }};
+        console.log(complex_challenge);
+     </script>
+    
+    <title>Document</title>
+</head>
+<body>
+    <!-- A simple button to launch a function. -->
+    <div>
+        <button id="button2">Click me to start webauthn</button>
+    </div>
+    
+        <!-- A simple button to launch a function. -->
+        <div>
+            <button id="button1">Click me to verify webauthn</button>
+        </div>
+</body>
+<!-- <script src="{{ url_for('static', filename='gomu2.js') }}"></script> -->
+</html>
