@@ -10,7 +10,7 @@ app = Flask(__name__)
 def index():
     complete_options=wb.create_options_using_webauthn()
     verification_options=wb2.create_options_using_webauthn_for_authentication()
-    return render_template('index.html', challenge=challenge, rp_id=rp_id, complete_options=complete_options, verification_options=verification_options)
+    return render_template('index.html', complete_options=complete_options, verification_options=verification_options)
 
 @app.route("/register", methods=["POST"])
 def register():
