@@ -8,8 +8,6 @@
     <script src="{{ url_for('static', filename='verri1.js') }}"></script>
     
     <script>
-        var rp="{{ rp_id }}";
-        var challenge2="{{ challenge }}";
         var complex_challenge={{ complete_options | safe }};
         var verification_options={{ verification_options | safe }};
         console.log(complex_challenge);
